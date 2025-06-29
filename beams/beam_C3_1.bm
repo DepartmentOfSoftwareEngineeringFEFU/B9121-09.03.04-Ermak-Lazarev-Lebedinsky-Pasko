@@ -1,0 +1,134 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "x": -1,
+            "y": 0,
+            "support": {
+                "id": 1,
+                "type": 1,
+                "angle": 0,
+                "force": {
+                    "id": 1,
+                    "value": 0.0,
+                    "angle": 0.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": true,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 1,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": false
+                }
+            },
+            "hinge_id": null
+        },
+        {
+            "id": 2,
+            "x": -1,
+            "y": 2,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 3,
+            "x": 1,
+            "y": 2,
+            "support": null,
+            "hinge_id": 1
+        },
+        {
+            "id": 4,
+            "x": 2,
+            "y": 0,
+            "support": {
+                "id": 2,
+                "type": 1,
+                "angle": 0,
+                "force": {
+                    "id": 2,
+                    "value": 0.0,
+                    "angle": 0.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": true,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 2,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": false
+                }
+            },
+            "hinge_id": null
+        }
+    ],
+    "segments": [
+        {
+            "id": 1,
+            "node1_id": 1,
+            "node2_id": 2,
+            "forces": [],
+            "torques": [
+                {
+                    "id": 3,
+                    "value": -20000,
+                    "node1_dist": 0,
+                    "unknown": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "node1_id": 2,
+            "node2_id": 3,
+            "forces": [
+                {
+                    "id": 3,
+                    "value": 15000,
+                    "angle": 270,
+                    "node1_dist": 1,
+                    "length": 1,
+                    "unknown": false
+                },
+                {
+                    "id": 4,
+                    "value": 2000,
+                    "angle": 270,
+                    "node1_dist": 1,
+                    "length": 2,
+                    "unknown": false
+                }
+            ],
+            "torques": []
+        },
+        {
+            "id": 3,
+            "node1_id": 3,
+            "node2_id": 4,
+            "forces": [
+                {
+                    "id": 5,
+                    "value": 10000,
+                    "angle": 180,
+                    "node1_dist": 1.118033988749895,
+                    "length": 1,
+                    "unknown": false
+                }
+            ],
+            "torques": []
+        }
+    ],
+    "hinges": [
+        {
+            "id": 1,
+            "node_ids": [
+                3
+            ]
+        }
+    ]
+}

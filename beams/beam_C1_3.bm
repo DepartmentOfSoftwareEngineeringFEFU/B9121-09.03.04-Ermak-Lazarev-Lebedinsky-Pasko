@@ -1,0 +1,100 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "x": 0,
+            "y": 0,
+            "support": {
+                "id": 1,
+                "type": 0,
+                "angle": 270,
+                "force": {
+                    "id": 1,
+                    "value": 0.0,
+                    "angle": 270.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": true,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 1,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": true
+                }
+            },
+            "hinge_id": null
+        },
+        {
+            "id": 2,
+            "x": 2,
+            "y": 0,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 3,
+            "x": 4,
+            "y": 2,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 4,
+            "x": 6,
+            "y": 2,
+            "support": null,
+            "hinge_id": null
+        }
+    ],
+    "segments": [
+        {
+            "id": 1,
+            "node1_id": 1,
+            "node2_id": 2,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 2,
+            "node1_id": 2,
+            "node2_id": 3,
+            "forces": [
+                {
+                    "id": 2,
+                    "value": 5000,
+                    "angle": 315,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown": false
+                }
+            ],
+            "torques": [
+                {
+                    "id": 2,
+                    "value": 8000,
+                    "node1_dist": 1,
+                    "unknown": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "node1_id": 3,
+            "node2_id": 4,
+            "forces": [
+                {
+                    "id": 3,
+                    "value": 1200,
+                    "angle": 270,
+                    "node1_dist": 1,
+                    "length": 2,
+                    "unknown": false
+                }
+            ],
+            "torques": []
+        }
+    ],
+    "hinges": []
+}

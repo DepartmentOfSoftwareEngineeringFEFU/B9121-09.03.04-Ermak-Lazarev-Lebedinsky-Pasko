@@ -1,0 +1,154 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "x": 1,
+            "y": 1,
+            "support": {
+                "id": 1,
+                "type": 0,
+                "angle": 0,
+                "force": {
+                    "id": 1,
+                    "value": 0.0,
+                    "angle": 0.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": true,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 1,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": true
+                }
+            },
+            "hinge_id": null
+        },
+        {
+            "id": 2,
+            "x": 1,
+            "y": 4,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 3,
+            "x": 4,
+            "y": 4,
+            "support": null,
+            "hinge_id": 1
+        },
+        {
+            "id": 4,
+            "x": 4,
+            "y": 3,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 5,
+            "x": 6,
+            "y": 3,
+            "support": {
+                "id": 2,
+                "type": 2,
+                "angle": 0,
+                "force": {
+                    "id": 2,
+                    "value": 0.0,
+                    "angle": 0.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": false,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 2,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": false
+                }
+            },
+            "hinge_id": null
+        },
+        {
+            "id": 6,
+            "x": 9,
+            "y": 3,
+            "support": null,
+            "hinge_id": null
+        }
+    ],
+    "segments": [
+        {
+            "id": 1,
+            "node1_id": 1,
+            "node2_id": 2,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 2,
+            "node1_id": 2,
+            "node2_id": 3,
+            "forces": [
+                {
+                    "id": 3,
+                    "value": 1600,
+                    "angle": 270,
+                    "node1_dist": 1.5,
+                    "length": 3,
+                    "unknown": false
+                }
+            ],
+            "torques": []
+        },
+        {
+            "id": 3,
+            "node1_id": 3,
+            "node2_id": 4,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 4,
+            "node1_id": 4,
+            "node2_id": 5,
+            "forces": [],
+            "torques": [
+                {
+                    "id": 3,
+                    "value": -16000,
+                    "node1_dist": 1,
+                    "unknown": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "node1_id": 5,
+            "node2_id": 6,
+            "forces": [
+                {
+                    "id": 4,
+                    "value": 9000,
+                    "angle": 330,
+                    "node1_dist": 3,
+                    "length": 1,
+                    "unknown": false
+                }
+            ],
+            "torques": []
+        }
+    ],
+    "hinges": [
+        {
+            "id": 1,
+            "node_ids": [
+                3
+            ]
+        }
+    ]
+}

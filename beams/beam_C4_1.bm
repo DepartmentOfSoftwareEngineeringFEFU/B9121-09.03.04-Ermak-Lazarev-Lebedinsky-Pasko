@@ -1,0 +1,177 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "x": 0,
+            "y": 0.5,
+            "support": {
+                "id": 1,
+                "type": 0,
+                "angle": 315,
+                "force": {
+                    "id": 1,
+                    "value": 0.0,
+                    "angle": 315.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": true,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 1,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": true
+                }
+            },
+            "hinge_id": null
+        },
+        {
+            "id": 2,
+            "x": 2,
+            "y": 3,
+            "support": null,
+            "hinge_id": 1
+        },
+        {
+            "id": 3,
+            "x": 4,
+            "y": 3,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 4,
+            "x": 6,
+            "y": 3,
+            "support": null,
+            "hinge_id": 2
+        },
+        {
+            "id": 5,
+            "x": 8,
+            "y": 3,
+            "support": {
+                "id": 2,
+                "type": 2,
+                "angle": 0,
+                "force": {
+                    "id": 2,
+                    "value": 0.0,
+                    "angle": 0.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": false,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 2,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": false
+                }
+            },
+            "hinge_id": null
+        },
+        {
+            "id": 6,
+            "x": 4,
+            "y": 0.5,
+            "support": {
+                "id": 3,
+                "type": 2,
+                "angle": 0,
+                "force": {
+                    "id": 3,
+                    "value": 0.0,
+                    "angle": 0.0,
+                    "node1_dist": 0,
+                    "length": 1,
+                    "unknown_x": false,
+                    "unknown_y": true
+                },
+                "torque": {
+                    "id": 3,
+                    "value": 0,
+                    "node1_dist": 0,
+                    "unknown": false
+                }
+            },
+            "hinge_id": null
+        }
+    ],
+    "segments": [
+        {
+            "id": 1,
+            "node1_id": 1,
+            "node2_id": 2,
+            "forces": [],
+            "torques": [
+                {
+                    "id": 4,
+                    "value": 29000,
+                    "node1_dist": 3,
+                    "unknown": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "node1_id": 2,
+            "node2_id": 3,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 3,
+            "node1_id": 3,
+            "node2_id": 4,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 5,
+            "node1_id": 3,
+            "node2_id": 6,
+            "forces": [
+                {
+                    "id": 4,
+                    "value": 11000,
+                    "angle": 0,
+                    "node1_dist": 1,
+                    "length": 1,
+                    "unknown": false
+                }
+            ],
+            "torques": []
+        },
+        {
+            "id": 4,
+            "node1_id": 4,
+            "node2_id": 5,
+            "forces": [],
+            "torques": [
+                {
+                    "id": 5,
+                    "value": -37000,
+                    "node1_dist": 1,
+                    "unknown": false
+                }
+            ]
+        }
+    ],
+    "hinges": [
+        {
+            "id": 2,
+            "node_ids": [
+                4
+            ]
+        },
+        {
+            "id": 1,
+            "node_ids": [
+                2
+            ]
+        }
+    ]
+}

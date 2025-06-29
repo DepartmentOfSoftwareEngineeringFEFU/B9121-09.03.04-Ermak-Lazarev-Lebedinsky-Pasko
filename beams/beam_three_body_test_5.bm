@@ -1,0 +1,83 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "x": 0,
+            "y": 0,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 2,
+            "x": 2,
+            "y": 0,
+            "support": null,
+            "hinge_id": 1
+        },
+        {
+            "id": 3,
+            "x": 4,
+            "y": 0,
+            "support": null,
+            "hinge_id": null
+        },
+        {
+            "id": 4,
+            "x": 6,
+            "y": 0,
+            "support": null,
+            "hinge_id": 2
+        },
+        {
+            "id": 5,
+            "x": 8,
+            "y": 0,
+            "support": null,
+            "hinge_id": null
+        }
+    ],
+    "segments": [
+        {
+            "id": 1,
+            "node1_id": 1,
+            "node2_id": 2,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 2,
+            "node1_id": 2,
+            "node2_id": 3,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 3,
+            "node1_id": 3,
+            "node2_id": 4,
+            "forces": [],
+            "torques": []
+        },
+        {
+            "id": 4,
+            "node1_id": 4,
+            "node2_id": 5,
+            "forces": [],
+            "torques": []
+        }
+    ],
+    "hinges": [
+        {
+            "id": 2,
+            "node_ids": [
+                4
+            ]
+        },
+        {
+            "id": 1,
+            "node_ids": [
+                2
+            ]
+        }
+    ]
+}
