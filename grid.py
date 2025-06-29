@@ -1,3 +1,18 @@
+"""
+grid.py — графический холст и логика отрисовки.
+
+Содержит класс GridWidget, отвечающий за визуализацию координатной сетки,
+отрисовку балок, узлов, опор, сил и моментов. Поддерживает масштабирование
+и панорамирование.
+
+Также обрабатывает взаимодействие мыши с холстом.
+
+Используемые технологии:
+- PyQt6: QWidget, QPainter;
+- structures.py для модели;
+- Qt Pixmap и SVG для векторных иконок.
+"""
+
 # Импорт необходимых классов из PyQt6
 from PyQt6.QtWidgets import QWidget
 from PyQt6.QtGui import QPainter, QPen, QColor, QFont, QPixmap, QTransform

@@ -1,3 +1,13 @@
+"""
+dialogs.py — набор пользовательских диалогов.
+
+Реализует модальные окна для ввода параметров: сегмент балки, опора, сила,
+момент, запуск расчёта. Также содержит DialogManager для централизованного
+вызова и обработки ошибок.
+
+Используется интерфейсом MainWindow (interface.py).
+"""
+
 from PyQt6.QtWidgets import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QComboBox, QCheckBox, QMessageBox
