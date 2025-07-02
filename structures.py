@@ -384,7 +384,7 @@ class Beam(IDNumerator):
                 if self not in hinge.bodies:
                     continue
 
-                prefix = f'hinge_{hinge.id}_for_beam_{self.id}'
+                prefix = f'hinge_{node.id}_for_beam_{self.id}'
                 name_x = f'{prefix}_force_x'
                 name_y = f'{prefix}_force_y'
 
@@ -397,11 +397,11 @@ class Beam(IDNumerator):
                 if hinge.bodies[0] == self:
                     hinges_equations.extend([
                         sp.Eq(sp.simplify(
-                            ' + '.join(f'hinge_{hinge.id}_for_beam_{body.id}_force_x' for body in hinge.bodies)
+                            ' + '.join(f'hinge_{node.id}_for_beam_{body.id}_force_x' for body in hinge.bodies)
                         ), 0),
 
                         sp.Eq(sp.simplify(
-                            ' + '.join(f'hinge_{hinge.id}_for_beam_{body.id}_force_y' for body in hinge.bodies)
+                            ' + '.join(f'hinge_{node.id}_for_beam_{body.id}_force_y' for body in hinge.bodies)
                         ), 0),
 
                         # sp.Eq(sp.simplify(
