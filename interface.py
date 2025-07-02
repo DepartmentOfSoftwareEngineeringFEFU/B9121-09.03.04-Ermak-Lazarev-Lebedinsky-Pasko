@@ -49,8 +49,7 @@ class MainWindow(QWidget):
         add_segment_button = QPushButton("Добавить сегмент балки")
         add_segment_button.setMinimumHeight(40)
         add_segment_button.setMinimumWidth(180)
-        add_segment_button.setStyleSheet("background-color: #f3e0dc")
-        add_segment_button.setStyleSheet("color: black;")
+        add_segment_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         add_segment_button.clicked.connect(self.dialogs.open_segment_dialog)  # Открывает диалог добавления сегмента
         left_layout.addWidget(add_segment_button)
 
@@ -58,8 +57,7 @@ class MainWindow(QWidget):
         add_support_button = QPushButton("Добавить опору")
         add_support_button.setMinimumHeight(40)
         add_support_button.setMinimumWidth(180)
-        add_support_button.setStyleSheet("background-color: #f3e0dc")
-        add_support_button.setStyleSheet("color: black;")
+        add_support_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         add_support_button.clicked.connect(self.dialogs.open_support_dialog)  # Открывает диалог добавления опоры
         left_layout.addWidget(add_support_button)
 
@@ -67,8 +65,7 @@ class MainWindow(QWidget):
         add_force_button = QPushButton("Добавить силу")
         add_force_button.setMinimumHeight(40)
         add_force_button.setMinimumWidth(180)
-        add_force_button.setStyleSheet("background-color: #f3e0dc")
-        add_force_button.setStyleSheet("color: black;")
+        add_force_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         add_force_button.clicked.connect(self.dialogs.open_force_dialog)  # Открывает диалог добавления силы
         left_layout.addWidget(add_force_button)
 
@@ -76,24 +73,21 @@ class MainWindow(QWidget):
         add_torque_button = QPushButton("Добавить момент")
         add_torque_button.setMinimumHeight(40)
         add_torque_button.setMinimumWidth(180)
-        add_torque_button.setStyleSheet("background-color: #f3e0dc")
-        add_torque_button.setStyleSheet("color: black;")
+        add_torque_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         add_torque_button.clicked.connect(self.dialogs.open_torque_dialog)  # Открывает диалог добавления момента
         left_layout.addWidget(add_torque_button)
 
         add_hinge_button = QPushButton("Добавить шарнир")
         add_hinge_button.setMinimumHeight(40)
         add_hinge_button.setMinimumWidth(180)
-        add_hinge_button.setStyleSheet("background-color: #f3e0dc")
-        add_hinge_button.setStyleSheet("color: black;")
+        add_hinge_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         add_hinge_button.clicked.connect(self.dialogs.open_hinge_dialog)
         left_layout.addWidget(add_hinge_button)
 
         solve_button = QPushButton("Посчитать")
         solve_button.setMinimumHeight(40)
         solve_button.setMinimumWidth(180)
-        solve_button.setStyleSheet("background-color: #f3e0dc")
-        solve_button.setStyleSheet("color: black;")
+        solve_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         solve_button.clicked.connect(self.dialogs.open_solve_dialog)  # Открывает диалог расчёта
         left_layout.addWidget(solve_button)
 
@@ -101,8 +95,7 @@ class MainWindow(QWidget):
         reset_offset_button = QPushButton("Вернуться к началу координат")
         reset_offset_button.setMinimumHeight(40)
         reset_offset_button.setMinimumWidth(180)
-        reset_offset_button.setStyleSheet("background-color: #f3e0dc")
-        reset_button.setStyleSheet("color: black;")
+        reset_offset_button.setStyleSheet("background-color: #f3e0dc; color: black;; color: black;")
         reset_offset_button.clicked.connect(self.grid_widget.resetOffset)  # Сброс смещения
         left_layout.addWidget(reset_offset_button)
 
@@ -110,8 +103,7 @@ class MainWindow(QWidget):
         clear_button = QPushButton("Очистить поле")
         clear_button.setMinimumHeight(40)
         clear_button.setMinimumWidth(180)
-        clear_button.setStyleSheet("background-color: #f3e0dc")
-        clear_button.setStyleSheet("color: black;")
+        clear_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         clear_button.clicked.connect(self.clear_button_message)  # Подтверждение и очистка
         left_layout.addWidget(clear_button)
 
@@ -119,8 +111,7 @@ class MainWindow(QWidget):
         save_button = QPushButton("Сохранить балку")
         save_button.setMinimumHeight(40)
         save_button.setMinimumWidth(180)
-        save_button.setStyleSheet("background-color: #f3e0dc")
-        save_button.setStyleSheet("color: black;")
+        save_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         save_button.clicked.connect(self.save_beam)  # Сохраняет beam в файл формата .bm
         left_layout.addWidget(save_button)
 
@@ -128,8 +119,7 @@ class MainWindow(QWidget):
         load_button = QPushButton("Загрузить балку")
         load_button.setMinimumHeight(40)
         load_button.setMinimumWidth(180)
-        load_button.setStyleSheet("background-color: #f3e0dc")
-        load_button.setStyleSheet("color: black;")
+        load_button.setStyleSheet("background-color: #f3e0dc; color: black;")
         load_button.clicked.connect(self.load_beam)  # Загружает beam из файла .bm
         left_layout.addWidget(load_button)
 
@@ -175,10 +165,8 @@ class MainWindow(QWidget):
             box.setText("Вы хотите загрузить другую балку? Текущая балка будет удалена.")
             button_yes = box.addButton("Да", QMessageBox.ButtonRole.YesRole)
             button_no = box.addButton("Нет", QMessageBox.ButtonRole.NoRole)
-            button_yes.setStyleSheet("background-color: #f3e0dc")
-            button_yes.setStyleSheet("color: black;")
-            button_no.setStyleSheet("background-color: #f3e0dc")
-            button_no.setStyleSheet("color: black;")
+            button_yes.setStyleSheet("background-color: #f3e0dc; color: black;")
+            button_no.setStyleSheet("background-color: #f3e0dc; color: black;")
             box.setStyleSheet("background-color: #d4a59a;")  
             box.exec()
 
@@ -212,10 +200,8 @@ class MainWindow(QWidget):
         box.setText("Вы уверены, что хотите очистить поле?")
         button_yes = box.addButton("Да", QMessageBox.ButtonRole.YesRole)
         button_no = box.addButton("Нет", QMessageBox.ButtonRole.NoRole)
-        button_yes.setStyleSheet("background-color: #f3e0dc")
-        button_yes.setStyleSheet("color: black;")
-        button_no.setStyleSheet("background-color: #f3e0dc")            
-        button_no.setStyleSheet("color: black;")
+        button_yes.setStyleSheet("background-color: #f3e0dc; color: black;")
+        button_no.setStyleSheet("background-color: #f3e0dc; color: black;")
         box.setStyleSheet("background-color: #d4a59a;")  
         box.exec()
 
