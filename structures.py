@@ -202,7 +202,7 @@ class Node(IDNumerator):
         return f"Node(coords=({self.x}, {self.y}), support={self.support})"
 
     def __hash__(self):
-        return hash((self.x, self.y, self.id))
+        return hash((self.x, self.y))
 
     def __eq__(self, other):
         return isinstance(other, Node) and self.id == other.id
@@ -479,21 +479,21 @@ class Beam(IDNumerator):
         if len(unknowns) > len(eqs):
             raise TooManyUnknownsError("Слишком много неизвестных!")
 
-        # print('---eqs---')
-        # for i in eqs:
-        #     print(i)
+        print('---eqs---')
+        for i in eqs:
+            print(i)
 
-        # print('---secondary_eqs---')
-        # for i in secondary_eqs:
-        #     print(i)
+        print('---secondary_eqs---')
+        for i in secondary_eqs:
+            print(i)
 
-        # print('---unknowns---')
-        # print(unknowns)
+        print('---unknowns---')
+        print(unknowns)
 
-        # print('---all_symbols---')
-        # print(all_symbols)
+        print('---all_symbols---')
+        print(all_symbols)
 
-        # print()
+        print()
         solution = sp.solve(eqs + secondary_eqs, sp.symbols(all_symbols))
 
         if len(solution) < 1:
