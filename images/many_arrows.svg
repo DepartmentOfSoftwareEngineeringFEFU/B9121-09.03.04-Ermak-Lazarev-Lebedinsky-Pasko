@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100">
+  <line x1="37" y1="20" x2="163" y2="20" stroke="black" stroke-width="5" />
+
+  <line x1="40" y1="0" x2="40" y2="90" stroke="black" stroke-width="5" />
+  <polygon points="40,100 30,80 50,80" />
+
+  <line x1="80" y1="20" x2="80" y2="90" stroke="black" stroke-width="5" />
+  <polygon points="80,100 70,80 90,80" />
+
+  <line x1="120" y1="20" x2="120" y2="90" stroke="black" stroke-width="5" />
+  <polygon points="120,100 110,80 130,80" />
+
+  <line x1="160" y1="0" x2="160" y2="90" stroke="black" stroke-width="5" />
+  <polygon points="160,100 150,80 170,80" />
+</svg>

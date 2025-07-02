@@ -186,7 +186,7 @@ class GridWidget(QWidget):
             rect_y = int(y1 + (y2 - y1) // 2 - (0 if x2 - x1 == 0 else 8))
 
             text_rect.moveCenter(QPoint(rect_x, rect_y))
-            text_rect.adjust(-1, -1, 0, 1)
+            text_rect.adjust(-1, -1, 1, 1)
 
             painter.setBrush(Qt.GlobalColor.white)
             painter.setPen(Qt.PenStyle.NoPen)
@@ -223,11 +223,24 @@ class GridWidget(QWidget):
         painter.save()
         painter.translate(x, y)
         painter.rotate(-force.angle)
-        painter.drawPixmap(-size_x, -size_y // 2, size_x, size_y, QPixmap("images\\arrow.svg"))
-        painter.restore()
 
-        text = f'{force.value} Н'
-        self.draw_annotation(painter, x, y, size_x, force.angle, text)
+        if force.length == 1:
+            painter.drawPixmap(-size_x, -size_y // 2, size_x, size_y, QPixmap("images\\arrow.svg"))
+            painter.restore()
+
+            text = f'{force.value} Н'
+            self.draw_annotation(painter, x, y, size_x, force.angle, text)
+        else:
+            painter.rotate(-90)
+            painter.drawPixmap(-size_x // 2, -size_y, size_x, size_y, QPixmap("images\\many_arrows.svg"))
+
+            text = f'{force.length}м'
+            self.draw_annotation(painter, 0, size_y, size_x, force.angle, text)
+
+            text = f'{force.value} Н/м'
+            self.draw_annotation(painter, 0, size_y * 2 + 6, size_x, force.angle, text)
+
+            painter.restore()
 
     # Отрисовка одного крутящего момента
     def draw_torque(self, painter, x1, y1, x2, y2, length, torque):
@@ -254,7 +267,7 @@ class GridWidget(QWidget):
         text_rect = metrics.tightBoundingRect(text)
         text_x = int(x - size * math.cos(math.radians(angle)))
         text_y = int(y + size * math.sin(math.radians(angle)))
-        text_rect.moveTopLeft(QPoint(text_x, text_y))
+        text_rect.moveCenter(QPoint(text_x, text_y))
         text_rect.adjust(-1, -1, 1, 1)
 
         painter.setBrush(Qt.GlobalColor.white)
