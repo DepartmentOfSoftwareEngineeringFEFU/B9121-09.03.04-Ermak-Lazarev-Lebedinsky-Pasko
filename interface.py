@@ -123,6 +123,13 @@ class MainWindow(QWidget):
         load_button.clicked.connect(self.load_beam)  # Загружает beam из файла .bm
         left_layout.addWidget(load_button)
 
+        image_button = QPushButton("Экспорт изображения")
+        image_button.setMinimumHeight(40)
+        image_button.setMinimumWidth(180)
+        image_button.setStyleSheet("background-color: #f3e0dc; color: black;")
+        image_button.clicked.connect(self.save_image)
+        left_layout.addWidget(image_button)
+
         # Обёртка для левой панели, фиксируем ширину
         left_widget = QWidget()
         left_widget.setLayout(left_layout)
@@ -220,3 +227,8 @@ class MainWindow(QWidget):
 
         # Обновление отображения
         self.grid_widget.update()
+
+    def save_image(self):
+        file_path, _ = QFileDialog.getSaveFileName(self, "Сохранить изображение", "", "JPEG Files (*.jpg);;All Files (*)")
+        if file_path:
+            self.grid_widget.save_as_image(file_path)

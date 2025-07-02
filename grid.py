@@ -373,3 +373,7 @@ class GridWidget(QWidget):
 
         self.offset.setX(max(-max_offset_x, min(max_offset_x, self.offset.x())))
         self.offset.setY(max(-max_offset_y, min(max_offset_y, self.offset.y())))
+
+    def save_as_image(self, file_path):
+        pixmap = self.grab()
+        pixmap.save(file_path, "JPG")
