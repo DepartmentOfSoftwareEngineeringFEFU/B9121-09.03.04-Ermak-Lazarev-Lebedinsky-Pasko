@@ -259,7 +259,7 @@ class GridWidget(QWidget):
         painter.restore()
 
         text = f'{torque.value} Нм'
-        self.draw_annotation(painter, x, y, size, 0, text)
+        self.draw_annotation(painter, x, y - 8, size, 0, text)
 
     # Отрисовка поясняющей подписи к силе или моменту
     def draw_annotation(self, painter, x, y, size, angle, text):
