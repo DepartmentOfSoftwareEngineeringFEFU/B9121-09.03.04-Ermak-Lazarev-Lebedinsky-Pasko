@@ -115,7 +115,7 @@ def load_beam_from_file(filename: str, beam: Beam):
     for segment_data in data['segments']:
         node1 = id_node_map[segment_data['node1_id']]
         node2 = id_node_map[segment_data['node2_id']]
-        segment = BeamSegment(node1, node2, custom_id=segment_data['id'])
+        segment = beam.add_segment_new(node1, node2, custom_id=segment_data['id'])
 
         for f in segment_data['forces']:
             force = Force(
@@ -129,5 +129,3 @@ def load_beam_from_file(filename: str, beam: Beam):
                 t['value'], t['node1_dist'], t['unknown'], custom_id=t['id']
             )
             segment.add_torque(torque)
-
-        beam.add_segment(segment)

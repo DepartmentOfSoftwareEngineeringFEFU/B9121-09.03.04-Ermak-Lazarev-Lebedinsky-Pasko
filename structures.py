@@ -267,7 +267,7 @@ class Beam(IDNumerator):
         self.graph.add_node(node)
         return node
 
-    def add_segment(self, segment: BeamSegment) -> BeamSegment:
+    def add_segment_exist(self, segment: BeamSegment) -> BeamSegment:
         node1 = self.add_node(segment.node1)
         node2 = self.add_node(segment.node2)
 
@@ -277,6 +277,20 @@ class Beam(IDNumerator):
         if self.graph.has_edge(node1, node2):
             return self.graph[node1][node2]['object']
 
+        self.graph.add_edge(node1, node2, object=segment)
+        return segment
+
+    def add_segment_new(self, node1: Node, node2: Node, custom_id: int | None = None) -> BeamSegment:
+        node1 = self.add_node(node1)
+        node2 = self.add_node(node2)
+
+        if node1.x == node2.x and node1.y == node2.y:
+            raise DotBeamError("Балка не может начинаться и заканчиваться в одной точке!")
+
+        if self.graph.has_edge(node1, node2):
+            return self.graph[node1][node2]['object']
+
+        segment = BeamSegment(node1, node2, custom_id)
         self.graph.add_edge(node1, node2, object=segment)
         return segment
 
@@ -525,7 +539,7 @@ class Beam(IDNumerator):
             subgraph = self.graph.subgraph(extended_nodes)
             beam = Beam()
             for u, v, data in subgraph.edges(data=True):
-                beam.add_segment(data['object'])
+                beam.add_segment_exist(data['object'])
 
             for node in subgraph.nodes:
                 node_to_subbeam[node] = beam

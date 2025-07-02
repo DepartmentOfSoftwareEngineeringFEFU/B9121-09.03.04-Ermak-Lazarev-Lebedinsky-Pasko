@@ -197,8 +197,8 @@ class DialogManager:
     def open_segment_dialog(self):
         self.open_dialog(
             BeamSegmentDialog,
-            lambda data: self.grid_widget.beam.add_segment(
-                BeamSegment(Node(data[0], data[1]), Node(data[2], data[3]))
+            lambda data: self.grid_widget.beam.add_segment_new(
+                Node(data[0], data[1]), Node(data[2], data[3])
             )
         )
 
